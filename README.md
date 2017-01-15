@@ -14,7 +14,7 @@ Key Value store with time revision - VD test.
 ## Usage
 
 Starting server
-``DEBUG=key-val-store:* npm start``
+```DEBUG=key-val-store:* npm start```
 
 Running test cases
-``npm test``
+```npm test```
