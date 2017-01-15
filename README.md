@@ -21,6 +21,15 @@ Starting server
 Running test cases
 ```npm test```
 
+Adding key
+```curl -d '{"MyKey":"My Value"}' -H "Content-Type: application/json" http://127.0.0.1:3000/objects```
+
+Retrieving key
+curl http://127.0.0.1:3000/objects/MyKey
+
+Retrieving key by timestamp
+curl http://127.0.0.1:3000/objects/MyKey?timestamp=1484477495
+
 ## Known Limitation
 
 2 Key added within a same second will only return one of them upon query the key.
