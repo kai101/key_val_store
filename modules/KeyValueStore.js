@@ -1,9 +1,15 @@
+/*!
+ * Key Value Store Service
+ * Handling all the storing procedure.
+ *
+ */
 
 var mongoose = require('mongoose');
 var Objects = mongoose.model('Objects');
 
 
 function store(key,val,callback){
+	//assign default value
 	callback = typeof callback !== "undefined" ? callback : function(){};
 	
 	var objects = new Objects({key: key, value: val,created_at: Math.floor(Date.now() / 1000) });
@@ -13,12 +19,11 @@ function store(key,val,callback){
 }
 
 function get(key, timestamp,callback){
+	//assign default value
 	callback = typeof callback !== "undefined" ? callback : function(){};
 	timestamp = typeof timestamp !== "undefined" ? timestamp : null;
 	
-	
-	
-	//query
+	//mongodb query
 	var q = {
 		key:key
 	};

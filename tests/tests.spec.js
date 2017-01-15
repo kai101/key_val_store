@@ -1,3 +1,9 @@
+/*!
+ * Test cases cover basic operations, functions and some errors.
+ * 
+ *
+ */
+
 var app = require('./../app.js');
 var chai = require('chai');
 var request = require('supertest');
@@ -31,6 +37,7 @@ describe('Basic store and get value test', function() {
 		});
 	});
 });
+
 describe('Time dependent value test', function() {
 	var start = Math.floor(Date.now() / 1000),
 		endFirst = 0,
